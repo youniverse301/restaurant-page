@@ -1,5 +1,5 @@
-import displayContent from './modules/home'
+import loadContent from './modules/home'
 
-displayContent();
+loadContent();
 
 console.log('mr yellow')

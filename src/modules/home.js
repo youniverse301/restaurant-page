@@ -16,18 +16,49 @@
     const navBar = document.createElement('div');
     navBar.classList.add('navBar');
 
+    const homeBtn = document.createElement('button');
+    homeBtn.classList.add('homeBtn');
+    homeBtn.setAttribute('id','btn');
+    homeBtn.innerHTML="Home";
 
+    const menuBtn = document.createElement('button');
+    menuBtn.classList.add('menuBtn');
+    menuBtn.setAttribute('id','btn');
+    menuBtn.innerHTML="Menu";
 
+    const aboutBtn = document.createElement('button');
+    aboutBtn.classList.add('aboutBtn');
+    aboutBtn.setAttribute('id','btn');
+    aboutBtn.innerHTML="About";
 
-    function displayContent() {
+    const contactBtn = document.createElement('button');
+    contactBtn.classList.add('contactBtn');
+    contactBtn.setAttribute('id','btn');
+    contactBtn.innerHTML="Contact";
+
+    menuBtn.addEventListener('click', function() {
+        h1.remove()
+        h2.remove()
+    })
+
+    homeBtn.addEventListener('click', function() {
+        content.appendChild(h1);
+        content.appendChild(h2);
+    })
+    
+    function loadContent() {
         content.appendChild(mainImg);
         content.appendChild(h1);
         content.appendChild(h2);
         content.appendChild(navBar);
+        navBar.appendChild(homeBtn);
+        navBar.appendChild(menuBtn);
+        navBar.appendChild(aboutBtn);
+        navBar.appendChild(contactBtn);
     }
 
 
 
 
 
-export default displayContent;
+export default loadContent;
