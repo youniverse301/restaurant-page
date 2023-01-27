@@ -52,6 +52,17 @@ body {
     grid-column-start: 1;
     grid-column-end: 4;
     height: 75px;
-    background-color: white;
-    opacity: 50%;
+    background-color: rgb(222, 221, 221);
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    margin-top: 1%;
+    gap: 25px;
+}
+
+#btn {
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
