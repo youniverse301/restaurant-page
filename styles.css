@@ -23,7 +23,7 @@ body {
     grid-column-end: 4;
 }
 
-.title {
+#title {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -35,7 +35,7 @@ body {
     color: white;
 }
 
-.slogan {
+#slogan {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -51,18 +51,80 @@ body {
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 4;
-    height: 75px;
+    height: 6vh;
     background-color: rgb(222, 221, 221);
     display: flex;
     align-items: center;
     padding-left: 100px;
-    margin-top: 1%;
+    margin-top: 1vh;
     gap: 25px;
 }
 
-#btn {
+.btn {
     border: none;
     background: none;
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+#backContainer{
+    height: 93vh;
+    width: 100vw;
+    align-self: end;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menuBack {
+    align-self: center;
+    justify-self: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pizza {
+    background-color: antiquewhite;
+    margin: 15px;
+    height: 350px;
+    width: 500px;
+}
+
+#cheeseContainer {
+    display: grid;
+    height: 100%;   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr .5fr;
+}
+
+#cheeseTitle {
+    justify-self: flex-end;
+    justify-self: center;
+
+}
+
+#cheesePrice {
+    justify-self: flex-start;
+    justify-self: center;
+}
+
+#cheeseImg {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
