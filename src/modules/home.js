@@ -3,48 +3,46 @@
     const mainImg = document.createElement('img');
     mainImg.classList.add('mainImg');
     mainImg.src = "https://thoughtcatalog.com/wp-content/uploads/2014/10/shutterstock_163838306.jpg?w=1000&h=667&crop=1"
-    console.log('yo')
-    
+   console.log('eeee') 
+
     const h1 = document.createElement('h1');
-    h1.classList.add('title')
+    h1.setAttribute('id','title');
     h1.innerHTML = "Giovanni's Pizza"
 
     const h2 = document.createElement('h2');
-    h2.classList.add('slogan')
+    h2.setAttribute('id','slogan');
     h2.innerHTML = "Freshly Picked From The Oven"
 
     const navBar = document.createElement('div');
     navBar.classList.add('navBar');
 
     const homeBtn = document.createElement('button');
-    homeBtn.classList.add('homeBtn');
-    homeBtn.setAttribute('id','btn');
+    homeBtn.classList.add('btn');
+    homeBtn.setAttribute('id','homeBtn');
     homeBtn.innerHTML="Home";
 
     const menuBtn = document.createElement('button');
-    menuBtn.classList.add('menuBtn');
-    menuBtn.setAttribute('id','btn');
+    menuBtn.classList.add('btn');
+    menuBtn.setAttribute('id','menuBtn');
     menuBtn.innerHTML="Menu";
 
     const aboutBtn = document.createElement('button');
-    aboutBtn.classList.add('aboutBtn');
-    aboutBtn.setAttribute('id','btn');
+    aboutBtn.classList.add('btn');
+    aboutBtn.setAttribute('id','aboutBtn');
     aboutBtn.innerHTML="About";
 
     const contactBtn = document.createElement('button');
-    contactBtn.classList.add('contactBtn');
-    contactBtn.setAttribute('id','btn');
+    contactBtn.classList.add('btn');
+    contactBtn.setAttribute('id','contactBtn');
     contactBtn.innerHTML="Contact";
 
-    menuBtn.addEventListener('click', function() {
-        h1.remove()
-        h2.remove()
-    })
-
-    homeBtn.addEventListener('click', function() {
+    function loadHome () {
         content.appendChild(h1);
         content.appendChild(h2);
-    })
+        document.getElementById("backContainer").remove();
+        document.getElementById("menuBack").remove();
+        
+    }
     
     function loadContent() {
         content.appendChild(mainImg);
@@ -61,4 +59,4 @@
 
 
 
-export default loadContent;
+export {loadContent, loadHome};
