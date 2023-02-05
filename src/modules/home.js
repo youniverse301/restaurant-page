@@ -5,6 +5,7 @@
     mainImg.src = "https://thoughtcatalog.com/wp-content/uploads/2014/10/shutterstock_163838306.jpg?w=1000&h=667&crop=1"
    console.log('eeee') 
 
+   
     const h1 = document.createElement('h1');
     h1.setAttribute('id','title');
     h1.innerHTML = "Giovanni's Pizza"
@@ -36,12 +37,20 @@
     contactBtn.setAttribute('id','contactBtn');
     contactBtn.innerHTML="Contact";
 
+    function removeMenu () {
+        const menuItems = document.querySelectorAll(".menu-item");
+        const menuBack = document.getElementById("menuBack");
+        for (let i = 0; i < menuItems.length; i++) {
+            menuBack.removeChild(menuItems[i]);
+          }
+        document.getElementById("backContainer").remove();
+        document.getElementById("menuBack").remove();
+    }
+
     function loadHome () {
         content.appendChild(h1);
         content.appendChild(h2);
-        document.getElementById("backContainer").remove();
-        document.getElementById("menuBack").remove();
-        
+        removeMenu();
     }
     
     function loadContent() {
