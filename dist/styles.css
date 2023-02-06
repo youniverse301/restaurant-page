@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Cafe Francoise';
+    src: url(./fonts/cafe-francoise/Cafe\ Francoise_D.otf);
+}
+
+@font-face {
+    font-family: 'Italianno';
+    src: url(./fonts/italianno/Italianno-Regular.ttf);
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -31,8 +41,10 @@ body {
     align-self: flex-end;
     justify-self: center;
     font-weight: bolder;
-    font-size: 6rem;
+    font-size: 10rem;
     color: white;
+    font-family: 'Italianno' ,'Times New Roman', Times, serif;
+    margin: 5%;
 }
 
 #slogan {
@@ -41,10 +53,12 @@ body {
     grid-column-start: 1;
     grid-column-end: 4;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: white;
     align-self: flex-start;
     justify-self: center;
+    font-family: 'Italianno' ,'Times New Roman', Times, serif;
+
 }
 
 .navBar {
@@ -63,8 +77,9 @@ body {
 .btn {
     border: none;
     background: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    font-family: 'Cafe Francoise','Times New Roman', Times, serif; 
 }
 
 #backContainer{
@@ -111,6 +126,7 @@ body {
     justify-self: center;
     align-self: center;
     margin: 0;
+    font-family: 'Cafe Francoise','Times New Roman', Times, serif; 
 }
 
 .menu-item > img {
@@ -121,3 +137,53 @@ body {
     border-radius: 10px;
 }
 
+#aboutContainer {
+    height: 93vh;
+    width: 100vw;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+}
+
+#aboutTitle {
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-self: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: 'Cafe Francoise','Times New Roman', Times, serif; 
+}
+
+#aboutImg {
+    width: 85vw;
+    max-width: 1500px;
+    height: 40vh;
+    align-self: center;
+    border: 5px solid black
+}
+
+#textBack {
+    height: fit-content;
+    width: 85vw;
+    max-width: 1500px;
+    align-self: center;
+    border: 5px solid antiquewhite;
+    background-color: antiquewhite;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutText {
+    font-size: 2rem;
+    font-family: 'Cafe Francoise','Times New Roman', Times, serif;
+    padding: 25px;
+    height: 100%;
+}

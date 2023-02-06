@@ -2,9 +2,7 @@
     const content = document.getElementById('content')
     const mainImg = document.createElement('img');
     mainImg.classList.add('mainImg');
-    mainImg.src = "https://thoughtcatalog.com/wp-content/uploads/2014/10/shutterstock_163838306.jpg?w=1000&h=667&crop=1"
-   console.log('eeee') 
-
+    mainImg.src = "https://thoughtcatalog.com/wp-content/uploads/2014/10/shutterstock_163838306.jpg?w=1000&h=667&crop=1";
    
     const h1 = document.createElement('h1');
     h1.setAttribute('id','title');
@@ -37,22 +35,29 @@
     contactBtn.setAttribute('id','contactBtn');
     contactBtn.innerHTML="Contact";
 
-    function removeMenu () {
-        const menuItems = document.querySelectorAll(".menu-item");
-        const menuBack = document.getElementById("menuBack");
-        for (let i = 0; i < menuItems.length; i++) {
-            menuBack.removeChild(menuItems[i]);
-          }
-        document.getElementById("backContainer").remove();
-        document.getElementById("menuBack").remove();
-    }
+    
 
     function loadHome () {
         content.appendChild(h1);
         content.appendChild(h2);
-        removeMenu();
     }
     
+    function removeContent() {
+        const content = document.getElementById("content");
+        const mainImg = document.getElementsByClassName("mainImg")[0];
+        const navBar = document.getElementsByClassName("navBar")[0];
+        
+        for (let i = content.children.length - 1; i >= 0; i--) {
+          const child = content.children[i];
+          if (child === mainImg || child === navBar) {
+            continue;
+          }
+          content.removeChild(child);
+        }
+      }
+      
+      
+
     function loadContent() {
         content.appendChild(mainImg);
         content.appendChild(h1);
@@ -68,4 +73,4 @@
 
 
 
-export {loadContent, loadHome};
+export {loadContent, loadHome, removeContent};
