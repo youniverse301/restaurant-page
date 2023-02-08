@@ -38,8 +38,6 @@ function loadMenu() {
     content.appendChild(backContainer);
     backContainer.appendChild(menuBack);
     createPizzaMenu();
-    //document.getElementById("title").remove();
-    //document.getElementById("slogan").remove();
 }
 
 export default loadMenu;

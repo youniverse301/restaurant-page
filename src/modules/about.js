@@ -19,7 +19,6 @@ function loadAbout () {
     aboutContainer.appendChild(aboutImg);
     aboutContainer.appendChild(textBack);
     textBack.appendChild(aboutText);
-
 }
 
 export {loadAbout};

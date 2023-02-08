@@ -1,6 +1,7 @@
 import {loadContent, loadHome} from './modules/home';
 import loadMenu from './modules/menu';
 import { loadAbout } from './modules/about';
+import { loadContact } from './modules/contact';
 import { removeContent } from './modules/home';
 
 
@@ -26,5 +27,10 @@ aboutBtn.addEventListener('click', function() {
     removeContent();
     loadAbout();
 });
+contactBtn.addEventListener('click', function() {
+    removeContent();
+    loadContact();
+});
+
 
 
