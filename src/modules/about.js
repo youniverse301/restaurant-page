@@ -2,7 +2,7 @@ const aboutContainer = document.createElement('div');
 aboutContainer.setAttribute('id','aboutContainer');
 const aboutImg = document.createElement("img");
 aboutImg.setAttribute('id','aboutImg');
-aboutImg.src = '../dist/imgs/interior.jpeg';
+aboutImg.src = './imgs/interior.jpeg';
 const textBack = document.createElement('div');
 textBack.setAttribute('id','textBack');
 const aboutTitle = document.createElement('h1');
