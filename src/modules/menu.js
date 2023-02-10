@@ -10,7 +10,7 @@ function createPizzaMenu() {
   const menuBack = document.getElementById("menuBack");
   const menuItems = ['Cheese', 'Pepperoni', 'Vegetable', 'Meat Lovers', 'Hawaiian', 'Margherita'];
   const menuPrices = ['$5.00', '$6.00', '$6.50', '$7.50', '$7.00', '$6.00'];
-  const menuPics = ["../dist/imgs/cheese-pizza.jpeg", "../dist/imgs/pepperoni-pizza.jpeg",
+  const menuPics = ["./imgs/cheese-pizza.jpeg", "../dist/imgs/pepperoni-pizza.jpeg",
   "../dist/imgs/vegetable-pizza.png", "../dist/imgs/meat-lovers-pizza.jpeg",
    "../dist/imgs/hawaiian-pizza.jpeg", "../dist/imgs/margherita-pizza.png"]
 
